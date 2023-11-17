@@ -1,7 +1,7 @@
-streamlit
 langchain
-python-dotenv
-sqlite3
-pandas
-tempfile
-pydantic
+streamlit
+openai
+pypdf
+sentence-transformers
+faiss-cpu
+numpy
