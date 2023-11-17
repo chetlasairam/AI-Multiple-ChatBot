@@ -1,5 +1,5 @@
 from langchain.chat_models import ChatOpenAI
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 import pickle
 import sqlite3
@@ -157,7 +157,8 @@ def configure_bot(bot_id):
 def manage_bot_conversation(bot_id, db_conn, db_cursor):
     st_app.sidebar.markdown(f"## Assistant Bot: {bot_id}")
 
-    load_dotenv('key.env')
+    # load_dotenv('key.env')
+    os.environ['OPENAI_API_KEY'] = st_app.secrets['OPENAI_API_KEY']
 
     if bot_id not in st_app.session_state.assistants:
         st_app.session_state.assistants[bot_id] = {"ai_model": None, "reply_temperature": 0.7, "token_limit": 500, "vector_store": None}
