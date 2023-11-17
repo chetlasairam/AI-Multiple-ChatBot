@@ -1,0 +1,7 @@
+streamlit
+langchain
+python-dotenv
+sqlite3
+pandas
+tempfile
+pydantic
